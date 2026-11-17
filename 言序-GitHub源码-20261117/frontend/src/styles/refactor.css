@@ -1,0 +1,94 @@
+/* Vue 组件补充样式；基础色板、断点、播放器和跟读样式沿用备份。 */
+a.primary,
+a.lang-badge,
+a.bbc-entry,
+a.corner-favorites-entry,
+a.link {
+  text-decoration: none;
+  color: inherit;
+}
+a.primary {
+  display: inline-block;
+  color: var(--ink);
+}
+.loading-card {
+  margin-top: 35px;
+}
+.preference-note {
+  margin-top: 20px;
+}
+.count-total,
+.bigstat small {
+  font-size: 13px;
+  color: var(--muted);
+}
+.table-scroll {
+  overflow: auto;
+}
+.attempt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.attempt-row b {
+  flex: none;
+  color: var(--accent);
+}
+.attempt-row small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.grammar-details {
+  text-align: left;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin: 20px 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.grammar-details summary {
+  cursor: pointer;
+  color: var(--accent);
+}
+.bbc-overview dd {
+  overflow-wrap: anywhere;
+}
+.bbc-reading {
+  overflow-anchor: none;
+}
+.bbc-dock-row {
+  min-width: 0;
+}
+.bbc-now {
+  min-width: 0;
+}
+.bbc-transport .bbc-toggle svg {
+  display: block;
+}
+.bbc-now-title {
+  max-width: 100%;
+}
+@media (max-width: 560px) {
+  .shadow-actions .bbc-secondary {
+    min-height: 42px;
+  }
+  .attempt-row {
+    flex-direction: column;
+    gap: 7px;
+  }
+  .bbc-current-track {
+    min-width: 0;
+  }
+  .bbc-track-meta {
+    min-width: 0;
+  }
+  .bbc-dock-row {
+    min-width: 0;
+  }
+  .shadow-words {
+    white-space: pre-wrap;
+  }
+}

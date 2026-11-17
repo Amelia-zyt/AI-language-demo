@@ -1,0 +1,627 @@
+.corner-note {
+  max-width: 760px;
+  margin-top: 30px;
+}
+.corner-note h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.bbc-favorites-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 20px;
+}
+.bbc-favorites-filter input {
+  width: 16px;
+  accent-color: var(--accent);
+}
+.bbc-episode-main {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 0;
+}
+.bbc-episode-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px 13px;
+  flex-wrap: wrap;
+  margin: 6px 0 10px;
+}
+.bbc-episode-title-row .bbc-episode-open {
+  padding: 0;
+  flex: none;
+  max-width: 100%;
+}
+.bbc-episode-title-row h3 {
+  margin: 0;
+}
+.bbc-episode-source {
+  font-size: 10px;
+  white-space: nowrap;
+  color: var(--accent);
+  text-decoration: none;
+  line-height: 1.9;
+}
+.favorite-star {
+  color: var(--accent);
+  font-size: 13px;
+}
+.bbc-equalizer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 18px;
+  width: 19px;
+  vertical-align: middle;
+}
+.bbc-equalizer > i {
+  display: block;
+  width: 3px;
+  height: 12px;
+  border-radius: 2px;
+  background: currentColor;
+  animation: equalize 0.7s ease-in-out infinite alternate;
+}
+.bbc-equalizer > i:nth-child(2) {
+  animation-delay: -0.35s;
+  height: 18px;
+}
+.bbc-equalizer > i:nth-child(3) {
+  animation-delay: -0.15s;
+  height: 9px;
+}
+@keyframes equalize {
+  from {
+    transform: scaleY(0.35);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bbc-equalizer > i {
+    animation: none;
+  }
+}
+.bbc-episode-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.bbc-episode-hero {
+  padding: 34px;
+}
+.bbc-episode-hero h1 {
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.4;
+  margin: 13px 0 25px;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
+}
+.bbc-detail-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.bbc-detail-actions .primary,
+.bbc-detail-actions .bbc-secondary {
+  min-height: 42px;
+}
+.bbc-detail-source {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 22px;
+  text-underline-offset: 4px;
+}
+.bbc-overview {
+  margin-top: 20px;
+  padding: 30px;
+}
+.bbc-overview h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+.bbc-overview > p {
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 26px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.bbc-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 30px;
+  margin: 0;
+  padding-top: 23px;
+  border-top: 1px solid var(--line);
+}
+.bbc-info-grid dt {
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.bbc-info-grid dd {
+  font-size: 13px;
+  margin: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+}
+.bbc-info-grid a {
+  color: var(--accent);
+  text-underline-offset: 4px;
+}
+.bbc-episode-page .bbc-reading {
+  padding: 30px;
+  width: 100%;
+}
+.bbc-episode-page .bbc-transcript {
+  max-height: min(68vh, 760px);
+  width: 100%;
+  margin: 18px auto 0;
+}
+.bbc-reading-top h2 {
+  font-weight: 500;
+  font-size: 19px;
+  margin: 0 0 15px;
+}
+.bbc-episode-page .bbc-cue {
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 2;
+}
+.coach-modes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.coach-modes button {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 22px;
+  padding: 9px 16px;
+  font-size: 12px;
+}
+.coach-modes button.chosen {
+  background: var(--soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.coach-panel {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.coach-voice-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 12px;
+}
+.coach-panel label {
+  font-size: 11px;
+  display: block;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.coach-panel select {
+  font-size: 12px;
+  padding: 11px;
+  width: 100%;
+}
+.coach-note {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.9;
+  margin: 13px 0;
+}
+.coach-target-controls {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin: 19px 0 9px;
+}
+.coach-target-controls > button {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 7px;
+  padding: 10px 12px;
+}
+.coach-target-controls select {
+  min-width: 0;
+}
+.coach-panel blockquote {
+  margin: 16px 0;
+  padding: 15px 18px;
+  border-left: 2px solid var(--accent);
+  background: var(--soft);
+  font-size: 16px;
+  line-height: 1.9;
+  max-height: 240px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.coach-buttons {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: 19px 0;
+}
+.coach-feedback-area {
+  margin-top: 25px;
+}
+.coach-feedback-area audio {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 18px;
+}
+.coach-feedback-area textarea {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  width: 100%;
+  resize: vertical;
+  padding: 14px;
+  font: 13px/1.9 inherit;
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+.coach-scores {
+  display: flex;
+  gap: 30px;
+  margin: 25px 0 15px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.coach-scores > div {
+  flex: 1;
+}
+.coach-scores b {
+  display: block;
+  font-size: 36px;
+  line-height: 1.3;
+  color: var(--accent);
+  font-weight: 500;
+}
+.coach-scores span {
+  font-size: 11px;
+  color: var(--muted);
+}
+#coachReview > p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+#coachReview h3 {
+  font-size: 14px;
+  margin: 26px 0 14px;
+  font-weight: 500;
+}
+.coach-issue {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 12px;
+}
+.coach-issue p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 8px 0;
+}
+.coach-issue p > span {
+  font-size: 10px;
+  color: var(--muted);
+  margin-right: 8px;
+}
+.coach-example {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+}
+.coach-example p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.coach-example button {
+  flex: none;
+}
+.coach-raw {
+  white-space: pre-wrap;
+  font: 12px/1.9 inherit;
+  overflow-wrap: anywhere;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 16px;
+  border-radius: 8px;
+}
+#coachStatus:empty {
+  display: none;
+}
+@media (max-width: 850px) {
+  .coach-voice-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .coach-voice-grid > div:first-child {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 560px) {
+  .bbc-episode-hero,
+  .bbc-overview,
+  .bbc-episode-page .bbc-reading {
+    padding: 20px;
+  }
+  .bbc-detail-actions {
+    gap: 9px;
+  }
+  .bbc-detail-actions .primary {
+    width: 100%;
+  }
+  .bbc-detail-actions .bbc-secondary {
+    flex: 1;
+    padding-inline: 10px;
+    font-size: 11px;
+  }
+  .bbc-info-grid {
+    gap: 18px 14px;
+  }
+  .bbc-info-grid dd {
+    font-size: 11px;
+  }
+  .bbc-overview > p {
+    font-size: 13px;
+  }
+  .bbc-episode-title-row {
+    gap: 4px 9px;
+  }
+  .bbc-episode-source {
+    font-size: 9px;
+  }
+  .coach-modes {
+    gap: 6px;
+  }
+  .coach-modes button {
+    font-size: 11px;
+    padding: 9px 12px;
+  }
+  .coach-voice-grid {
+    gap: 12px;
+  }
+  .coach-panel blockquote {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .coach-buttons .primary {
+    width: 100%;
+  }
+  .coach-scores {
+    padding: 16px;
+    gap: 18px;
+  }
+  .coach-scores b {
+    font-size: 30px;
+  }
+  .coach-example {
+    align-items: start;
+  }
+  .coach-example p {
+    font-size: 12px;
+  }
+  .coach-example button {
+    padding: 6px 9px;
+  }
+  .bbc-duration {
+    padding: 9px;
+  }
+  .bbc-episode {
+    gap: 10px;
+  }
+  nav button {
+    padding-inline: 18px;
+  }
+}
+.coach-score-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.coach-score-detail strong {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.coach-feedback-area textarea {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.coach-ai-advice {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.9;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+}
+.shadow-open {
+  overflow: hidden;
+}
+.shadow-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(4, 10, 8, 0.78);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: auto;
+}
+.shadow-dialog {
+  position: relative;
+  width: min(800px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 46px;
+  background: var(--panel);
+  box-shadow: 0 28px 100px #0006;
+  text-align: center;
+}
+.shadow-dialog h2 {
+  font-size: 27px;
+  margin: 18px 0 30px;
+}
+.shadow-close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 30px;
+  width: 42px;
+  height: 42px;
+}
+.shadow-words {
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  margin: 20px 0 30px;
+}
+.shadow-good {
+  color: #7edba3;
+}
+.shadow-miss {
+  color: #ff9696;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 6px;
+}
+.shadow-wave {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--soft);
+  color: var(--accent);
+  margin: 18px 0;
+}
+.shadow-wave canvas {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+.shadow-wave span {
+  font-size: 12px;
+}
+.shadow-wave:disabled {
+  opacity: 0.6;
+}
+.shadow-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+.shadow-dialog #shadowStatus {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--accent);
+}
+.shadow-dialog #shadowScore > strong {
+  font-size: 54px;
+  font-weight: 500;
+}
+.shadow-dialog #shadowScore small {
+  font-size: 18px;
+  color: var(--muted);
+}
+.shadow-dialog #shadowPrompt {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.shadow-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 12px;
+}
+.shadow-legend span:first-child {
+  color: #7edba3;
+}
+.shadow-legend span:last-child {
+  color: #ff9696;
+}
+.shadow-dialog .coach-note {
+  line-height: 1.8;
+}
+.shadow-dialog button:focus-visible,
+.bbc-shadow-icon:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (max-width: 560px) {
+  .shadow-overlay {
+    padding: 14px;
+  }
+  .shadow-dialog {
+    padding: 44px 22px 24px;
+    max-height: calc(100dvh - 28px);
+    border-radius: 18px;
+  }
+  .shadow-dialog h2 {
+    font-size: 23px;
+  }
+  .shadow-words {
+    font-size: 23px;
+  }
+}
+
+#shadowReplay {
+  min-width: 150px;
+}
+#shadowReplay:not(:disabled) {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+}
+.shadow-actions {
+  align-items: center;
+}
+.shadow-dialog #shadowStatus {
+  font-size: 12px;
+  min-height: 22px;
+}
+@media (max-width: 560px) {
+  .shadow-actions {
+    gap: 9px;
+  }
+  .shadow-actions button {
+    flex: 1 1 140px;
+    min-height: 42px;
+  }
+  #shadowReplay {
+    min-width: 0;
+  }
+}
