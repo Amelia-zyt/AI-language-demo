@@ -1,398 +1,132 @@
-# AI-language-demo
-
-````markdown
-# 言序 · 语言自习室
-
-一个支持单词学习、BBC 英语听力、跟读练习和 AI 英语口语对话的学习平台。
-
-言序希望帮助学习者把“认识单词、听懂表达、开口交流”连接起来，按照自己的节奏持续练习。
-
-> 项目采用 Vue 3 + TypeScript + Vite 前端与 Python + FastAPI 后端，通过 API 通信，支持桌面端和移动端布局。
-
-## 功能介绍
-
-### 单词学习
-
-- 支持英语、中文、韩语、日语、法语和西班牙语。
-- 英语学习内容包括日常生活、四级、六级、雅思、出国旅游、酒店入住和机场对话。
-- 每轮学习 10～20 个词，按轮次依次循环。
-- 每个新词需要连续答对三次才能掌握，答错后重新累计。
-- 支持看词选义、释义选词、听力和拼写练习。
-- 单击选项提交答案，双击展开词义对照。
-- 提供单词音标、释义、例句，以及单词和例句朗读。
-
-当前词库属于项目内置学习内容，不代表覆盖完整考试词汇范围。
-
-### BBC 语言角
-
-- 收录多个 BBC Learning English 栏目，支持分类筛选。
-- 节目按发布时间倒序排列。
-- 提供独立收藏夹和单集详情页。
-- 支持播放、暂停、前后跳转 15 秒。
-- 支持 0.8×、0.9×、1×、1.3×、1.5× 播放速度。
-- 提供官方文稿、BBC 官网链接和可用的官方 PDF 下载。
-- 支持生成带时间码的音频文本、点击句子跳播和播放高亮。
-- 跟随播放时，仅滚动音频文本区域。
-
-BBC 音频和文稿的可用性取决于官方资源、网络及地区访问条件。
-
-### 跟读练习
-
-- 点击句子旁的麦克风进入跟读弹窗。
-- 录音时显示随音量变化的波形。
-- 停止录音后可回放自己的声音。
-- 使用 Whisper 在浏览器中识别英语语音。
-- 后端根据识别文字与参考句进行对齐，显示分数和逐词红绿标记。
-- 支持播放当前句 BBC 原声，句末自动暂停，弹窗保持打开。
-- 提供基础语法提示和可选的 AI 表达建议。
-
-**跟读分数表示识别文字与参考句的一致程度，不是专业音素级发音准确率，也不是考试成绩。**
-
-### AI 英语口语对话
-
-新增「口语」入口，可选择以下提供商：
-
-- DeepSeek
-- ChatGPT / OpenAI
-- Gemini
-- 千问 Qwen
-
-所有提供商默认使用英语口语老师角色，引导交流、纠正表达，并提出后续问题。
-
-- 支持语音输入和文字输入。
-- 语音识别完成后自动发送。
-- 显示用户输入和 AI 回答的文字内容。
-- 支持自动朗读回答、停止朗读和再次播放。
-- 支持开始新对话。
-
-当前实现为**轮流语音对话**：语音识别 → 文字模型回复 → 设备语音朗读，不是全双工实时音频通话。
-
-此功能需要自行配置所选提供商的 API Key 和模型名称。不支持浏览器语音识别时，可使用文字输入。
-
-### 学习档案与主题
-
-- 设置学习语言、内容、轮次大小和学习偏好。
-- 查看学习记录、掌握进度和跟读历史。
-- 保存收藏内容。
-- 导出学习数据。
-- 支持跟随系统、深色、浅色、小清新和护眼主题。
-
-## 技术栈
-
-| 部分 | 技术 |
-|---|---|
-| 前端框架 | Vue 3 |
-| 前端语言 | TypeScript |
-| 构建工具 | Vite |
-| 页面路由 | Vue Router |
-| 后端框架 | FastAPI |
-| 后端语言 | Python |
-| 数据存储 | SQLite、localStorage、IndexedDB |
-| 音频录制与处理 | MediaRecorder、Web Audio API |
-| 跟读语音识别 | Whisper、Transformers.js、Web Worker |
-| 口语输入 | 浏览器 SpeechRecognition |
-| 回答朗读 | 浏览器 SpeechSynthesis |
-| 测试 | pytest、Node.js Test Runner |
-
-## 项目结构
-
-```text
-lingua-vue-fastapi/
-├── frontend/
-│   ├── src/
-│   │   ├── api/              # API 请求与浏览器缓存
-│   │   ├── components/       # 播放器、跟读弹窗、单词详情等组件
-│   │   ├── composables/      # 档案、播放、语音、主题等状态与逻辑
-│   │   ├── domain/           # 学习轮转、文本与时间码处理
-│   │   ├── styles/           # 页面样式和主题
-│   │   ├── types/            # TypeScript 数据类型
-│   │   ├── views/            # 页面
-│   │   ├── workers/          # 本地 AI 模型推理
-│   │   ├── App.vue           # 应用外壳与导航
-│   │   ├── main.ts           # 前端启动入口
-│   │   └── router.ts         # 页面路由
-│   ├── tests/                # 前端测试
-│   ├── .env.example          # 前端配置示例
-│   ├── package.json          # 依赖与运行命令
-│   └── vite.config.ts        # 构建与开发代理配置
-├── backend/
-│   ├── app/
-│   │   ├── api/              # 学习、BBC、口语对话 API
-│   │   ├── domain/           # 跟读评分逻辑
-│   │   ├── services/         # BBC 服务和未来 Agent 接口
-│   │   ├── config.py         # 后端配置
-│   │   ├── schemas.py        # 请求与响应模型
-│   │   ├── storage.py        # SQLite 数据读写
-│   │   └── main.py           # FastAPI 应用入口
-│   ├── data/                 # 课程数据、节目目录及运行时数据库
-│   ├── tests/                # 后端测试
-│   ├── .env.example          # 后端配置示例
-│   └── requirements.txt      # Python 依赖
-├── docs/                     # 架构、接口和验证说明
-├── scripts/                  # 打包工具
-├── run.py                    # 生产启动入口
-├── .gitignore
-└── README.md
-```
-
-## 本地运行
-
-### 环境要求
-
-- Python：建议使用 3.12。
-- Node.js：22.12 或更高版本。
-- npm。
-- 支持现代浏览器 API 的浏览器。
-
-录音需要 HTTPS 或 localhost，并需要用户允许麦克风权限。
-
-### 1. 启动后端
-
-以下命令以 Windows PowerShell 为例，在项目根目录打开终端：
-
-```powershell
-cd backend
-
-py -m venv .venv
-
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-
-.\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-```
-
-后端接口文档：
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-健康检查：
-
-```text
-http://127.0.0.1:8000/api/health
-```
-
-### 2. 启动前端
-
-另外打开一个终端，在项目根目录执行：
-
-```powershell
-cd frontend
-
-npm ci
-
-npm run dev
-```
-
-打开：
-
-```text
-http://127.0.0.1:5173
-```
-
-Vite 已配置开发代理，将 `/api` 请求转发至 `http://127.0.0.1:8000`。
-
-开发时需要同时保持前端和后端运行。
-
-### 3. 构建后统一启动
-
-也可以先构建前端，再由 FastAPI 提供静态页面和 API：
-
-```powershell
-# 在项目根目录执行
-cd frontend
-npm ci
-npm run build
-cd ..
-
-.\backend\.venv\Scripts\python.exe run.py
-```
-
-打开：
-
-```text
-http://127.0.0.1:8000
-```
-
-GitHub 源码包不包含构建产物，需要先执行 `npm run build`。
-
-Linux/macOS 下，将虚拟环境的 Python 路径替换为：
-
-```text
-backend/.venv/bin/python
-```
-
-## 配置 AI 口语模型
-
-口语对话通过 FastAPI 调用所选提供商的 API。真实密钥只应配置在运行后端的电脑或服务器上。
-
-| 提供商 | API Key 环境变量 | 模型名称环境变量 |
-|---|---|---|
-| DeepSeek | `DEEPSEEK_API_KEY` | `DEEPSEEK_MODEL` |
-| OpenAI | `OPENAI_API_KEY` | `OPENAI_MODEL` |
-| Gemini | `GEMINI_API_KEY` | `GEMINI_MODEL` |
-| 千问 | `QWEN_API_KEY` | `QWEN_MODEL` |
-
-模型名称应填写对应账号实际可调用的模型 ID。
-
-例如，在启动后端的 PowerShell 终端中设置：
-
-```powershell
-$env:DEEPSEEK_API_KEY = "你的API密钥"
-$env:DEEPSEEK_MODEL = "你的可用模型ID"
-
-.\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-```
-
-如需指定兼容接口地址，可以设置：
-
-```text
-DEEPSEEK_BASE_URL
-OPENAI_BASE_URL
-GEMINI_BASE_URL
-QWEN_BASE_URL
-```
-
-地址应为 API 基址，不要重复添加 `/chat/completions`。千问等服务需使用与账号地域匹配的地址。
-
-注意：
-
-- `.env.example` 只是配置示例，项目默认不会自动读取 `.env`。
-- 更改环境变量后需要重启后端。
-- ChatGPT 网页账号或订阅不等于已经配置 OpenAI API。
-- 模型服务可能产生费用，以对应提供商的账户和计费规则为准。
-- 不要把 API Key 写进前端代码、README 或提交到 GitHub。
-
-## 数据与隐私
-
-- 学习档案和跟读评分保存在 SQLite。
-- 默认数据库路径为 `backend/data/lingua.sqlite3`。
-- 浏览器使用 localStorage 保存本地偏好和进度。
-- IndexedDB 缓存公开文稿和音频时间码。
-- 跟读录音通过浏览器内的 Whisper 处理，原始录音不上传到本项目后端；识别文字和评分会经 API 保存。
-- 口语对话的文字和最近对话上下文会发送给用户所选的模型提供商。
-- 口语输入使用浏览器语音识别，其处理方式取决于浏览器服务，不能视为始终离线。
-- 当前设备 ID 用于定位学习档案，不是完整的账号认证系统。
-
-公开部署为多用户服务前，应补充用户认证、访问控制和请求限流，保护档案数据与模型额度。
-
-## AI 能力说明
-
-跟读使用：
-
-```text
-onnx-community/whisper-tiny.en_timestamped
-```
-
-可选的本地语法建议使用：
-
-```text
-onnx-community/Qwen2.5-0.5B-Instruct
-```
-
-首次使用需要下载模型资源，之后复用浏览器缓存。网络状况、设备性能和浏览器存储限制会影响速度。
-
-语音识别可能出现漏词、误识别；语法小模型也可能给出不准确的解释。反馈用于辅助练习，应结合原文核对。
-
-## 测试
-
-前端类型检查和生产构建：
-
-```powershell
-cd frontend
-npm run build
-```
-
-前端测试：
-
-```powershell
-npm test
-```
-
-后端测试：
-
-```powershell
-cd backend
-.\.venv\Scripts\python.exe -m pytest -q
-```
-
-开发环境的录音验证页面：
-
-```text
-http://127.0.0.1:5173/tests/browser.html
-```
-
-该页面使用合成音轨验证录音组件，并提供真实模型测试入口；不会作为生产首页发布。
-
-既有自动测试不代表所有外部模型提供商均已完成真实调用验证。模型对话需要配置有效密钥后分别测试。
-
-## 常见问题
-
-### 出现 `cannot import name 'ArgsKwargs'`
-
-可能是虚拟环境中残留了其他 Python 版本的 Pydantic 二进制文件，或依赖安装不完整。
-
-在 `backend` 目录尝试：
-
-```powershell
-.\.venv\Scripts\python.exe -m pip install --force-reinstall --no-cache-dir --only-binary=:all: -r requirements.txt
-```
-
-更换 Python 版本时，应重新创建虚拟环境，不要直接复用旧 `.venv`。
-
-### 页面提示无法连接服务
-
-确认后端已启动，并检查：
-
-```text
-http://127.0.0.1:8000/api/health
-```
-
-开发模式下，前端和后端需要分别启动。
-
-### 模型显示“待配置”
-
-检查该提供商对应的 `API_KEY` 和 `MODEL` 环境变量，并重启后端。
-
-### 语音输入不可用
-
-检查麦克风权限、HTTPS/localhost 条件及浏览器是否支持 SpeechRecognition。不支持时可使用文字输入。
-
-### 本地更新后线上网站没有变化
-
-本地代码更新不会自动部署到线上。需要重新构建并部署至支持 Python/FastAPI 的服务器。
-
-## 后续扩展
-
-项目已预留 Agent 接口边界，可进一步接入 LangGraph，实现：
-
-- 根据学习记录生成个性化计划。
-- 根据错词和跟读结果安排复习。
-- 推荐合适的 BBC 节目和练习材料。
-- 生成情景口语任务。
-- 保存长期学习目标与阶段反馈。
-
-相关接口位于：
-
-```text
-backend/app/services/agent_port.py
-```
-
-当前尚未实现完整的 LangGraph 学习 Agent。
-
-## 内容与第三方许可
-
-BBC 节目、音频及官方文稿版权归 BBC 所有。项目保留来源链接，源码仓库不应包含未经授权再分发的音频和 PDF。
-
-第三方依赖许可见：
-
-```text
-docs/THIRD_PARTY_NOTICES.txt
-```
-
-本项目源码的使用和分发权限，以仓库实际提供的 LICENSE 文件为准。
+# 言序（AI-language-demo）
+
+> 基于 **Python FastAPI + Vue 3 + TypeScript + Vite** 架构持续升级的 AI 语言自习室，同时提供 **Cloudflare Workers + Cloudflare D1** 无服务器边缘部署适配（线上自定义域名：`https://lingua.exhan.dpdns.org`）。
+>
+> 最新功能与变更说明参见 [`更新文档.md`](更新文档.md) · 源码目录位于 [`言序-20261117/`](言序-20261117/)
 
 ---
 
-**言序：每一次练习，都让表达更自然一点。**
-````
+## 核心功能亮点
+
+- **精简专注的学习布局**：学习页改造为居中单栏卡片并默认折叠本轮词表；支持 **跟随系统 / 深色 / 小清新 / 护眼 / 浅色** 5 套主题切换。
+- **移动端答题自动回顶**：手机端及窄屏下点击「下一题 →」时自动收起解析并平滑滚动回题面顶部。
+- **账号系统与游客隔离**：支持用户名密码注册登录（**PBKDF2-SHA256** + **HMAC-SHA256 JWT** + `HttpOnly` Cookie），兼容免登录 `X-Learner-ID` 游客模式，账号与游客数据严格隔离。
+- **新用户 CEFR 水平评测**：刚注册的用户自动引导进入 12 题（满分 100 分）英语水平测评（词汇 / 语法 / 阅读 / 听力），生成 A1–C1 等级报告并一键匹配推荐词库。
+- **答题记录实时持久化**：每次词汇提交实时写入 SQLite / Cloudflare D1 `answer_records` 表，并在「我的」页面支持按 **全部 / 错题 / 完成轮次 / 跟读评分** 分页回看。
+- **人教版分级课文 + DeepSeek AI 讲解**：收录参考 GitHub `TapXWorld/ChinaTextbook` 的 7 篇由浅入深人教版教材课文（A1–C1），支持双语对照、TTS 朗读，并接入 DeepSeek API（默认 `deepseek-flash`）提供**全文精讲 / 逐段拆解 / 自由提问**与数据库缓存。
+- **BBC 语言角与本地离线跟读**：支持 8 个 BBC Learning English 官方栏目、收藏夹、官方文稿与 PDF 下载、Range 原声音频播放，并在浏览器端通过 ONNX WASM 运行 **Whisper** 语音识别与 **Qwen2.5** 语法建议模型。
+
+---
+
+## 技术栈与架构（双后端对齐同一 `/api` 契约）
+
+| 层级 | 组件选型 |
+|---|---|
+| **前端框架** | Vue 3 (`^3.5.45`)、TypeScript (`^5.9.3`)、Vite (`^8.3.6`)、Vue Router (`^4.6.4`) |
+| **浏览器端本地 AI** | `@huggingface/transformers` (`^3.8.1`) + ONNX Runtime WebAssembly（后台 Web Worker） |
+| **本地 / 单机后端** | Python 3 + FastAPI (`0.121.1`) + Uvicorn + SQLite（入口 [`run.py`](言序-20261117/run.py)） |
+| **边缘无服务器后端** | Cloudflare Workers + Assets + Cloudflare D1（入口 [`worker/index.ts`](言序-20261117/worker/index.ts)） |
+| **云端 AI 讲解** | DeepSeek Chat Completions API（默认模型 `deepseek-flash`） |
+
+---
+
+## 仓库目录结构
+
+```text
+AI-language-demo/
+├── README.md                              # 仓库主说明文档（当前文件）
+├── 更新文档.md                            # 2026-11-17 xiaoyi-assessment 更新详情与改动文件清单
+└── 言序-20261117/                         # 完整源码目录（与 main Python+Vue 结构对齐，已脱敏）
+    ├── run.py                             # Python FastAPI 单机生产启动入口（127.0.0.1:8000）
+    ├── package.json                       # Wrangler、前端构建与 D1 脚本
+    ├── wrangler.jsonc                     # Cloudflare Workers + D1 配置模板（已脱敏）
+    ├── db/schema.sql                      # SQLite / Cloudflare D1 统一建表脚本（7 张表）
+    ├── backend/
+    │   ├── requirements.txt               # fastapi / uvicorn / httpx / pytest
+    │   ├── data/
+    │   │   ├── learning.json              # 6 语言、7 类课程词汇数据
+    │   │   ├── articles.json              # 7 篇由浅入深人教版英语分级课文
+    │   │   └── bbc-catalog.json           # BBC 节目目录缓存
+    │   ├── app/
+    │   │   ├── main.py / config.py / schemas.py / storage.py / auth.py
+    │   │   ├── api/                       # auth.py、placement.py、articles.py、learning.py、bbc.py、speaking.py
+    │   │   ├── domain/assessment.py       # 词序列对齐评分与基础语法规则提示
+    │   │   └── services/                  # bbc_upstream.py、catalog.py、agent_port.py
+    │   └── tests/test_api.py              # 13 项 FastAPI 接口与领域测试
+    ├── worker/                            # Cloudflare Worker 边缘后端实现与单元测试
+    └── frontend/                          # Vue 3 + TypeScript + Vite 前端源码与单元测试
+```
+
+---
+
+## AI 模型清单与隐私说明
+
+| 模型标识 | 运行位置 | 用途与说明 |
+|---|---|---|
+| `deepseek-flash` | 云端（DeepSeek API） | 课文全文精讲、逐段拆解与自由问答（可通过 `DEEPSEEK_MODEL` 环境变量修改；全文/段落讲解缓存在数据库 `article_ai_notes`） |
+| `onnx-community/whisper-tiny.en_timestamped` (`q8`) | 浏览器端 ONNX WASM | 离线英文音频/录音识别与逐词时间码（原始音频不上传至外部服务器） |
+| `onnx-community/Qwen2.5-0.5B-Instruct` (`q4`) | 浏览器端 ONNX WASM | 离线生成简明英语语法与表达建议 |
+
+---
+
+## 本地运行与部署指南（已脱敏）
+
+### 方式一：Python FastAPI + Vue（与 `main` 一致）
+
+1. 构建前端资源：
+   ```powershell
+   cd 言序-20261117/frontend
+   npm install
+   npm run build
+   ```
+2. 创建并激活 Python 虚拟环境，安装依赖并启动：
+   ```powershell
+   cd ..
+   py -m venv backend/.venv
+   ./backend/.venv/Scripts/pip install -r backend/requirements.txt
+
+   # 如需启用课文 DeepSeek AI 讲解，请先在当前终端环境变量中配置（切勿提交密钥）：
+   # $env:DEEPSEEK_API_KEY="你的DeepSeek密钥"
+   # $env:JWT_SECRET="你的随机JWT密钥"
+   ./backend/.venv/Scripts/python run.py
+   ```
+   浏览器访问 `http://127.0.0.1:8000`（前后端热更新调试可另开终端在 `frontend/` 运行 `npm run dev` 访问 `http://127.0.0.1:5173`）。
+
+### 方式二：Cloudflare Workers + D1 无服务器部署
+
+1. 安装根目录 Wrangler 依赖并创建 D1 数据库：
+   ```powershell
+   cd 言序-20261117
+   npm install
+   npx wrangler d1 create lingua-db
+   ```
+2. 将生成的数据库 ID 填入本地 `wrangler.jsonc` 中的 `database_id`（替换 `<YOUR_D1_DATABASE_ID>` 占位符），并按需修改 `routes` 自定义域名。
+3. 初始化远程表结构、配置 Secrets 并部署：
+   ```powershell
+   npx wrangler d1 execute lingua-db --remote --file=db/schema.sql
+   npx wrangler secret put JWT_SECRET
+   npx wrangler secret put DEEPSEEK_API_KEY
+   npm run deploy
+   ```
+
+---
+
+## 自动化验证命令
+
+在 `言序-20261117/` 目录下运行：
+
+```powershell
+# 1. Python FastAPI 后端全量测试（13 项）
+./backend/.venv/Scripts/python -m pytest backend/tests -v
+
+# 2. 前端类型检查、生产构建与单元测试（4 项）
+cd frontend
+npm run build
+npm test
+
+# 3. Cloudflare Worker 类型检查、单测（3 项）与打包预检
+cd ..
+./frontend/node_modules/.bin/tsc -p worker/tsconfig.json
+./frontend/node_modules/.bin/tsx --test worker/worker.test.ts
+npx wrangler deploy --dry-run
+```

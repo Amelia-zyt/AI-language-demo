@@ -1,0 +1,25 @@
+{
+  "name": "lingua",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./frontend/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lingua-db",
+      "database_id": "<YOUR_D1_DATABASE_ID>"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "lingua.exhan.dpdns.org",
+      "custom_domain": true
+    }
+  ]
+}

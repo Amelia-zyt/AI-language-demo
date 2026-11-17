@@ -1,0 +1,368 @@
+{
+  "articles": [
+    {
+      "id": "pep-p6-shadow",
+      "order": 1,
+      "level": "A1",
+      "difficultyLabel": "入门 · 小学六下",
+      "grade": "人教版 PEP 小学英语六年级下册 Unit 1",
+      "title": "Little Duck's Shadow",
+      "titleZh": "小鸭子的影子",
+      "source": "ChinaTextbook (GitHub) · 人教版 PEP 小学英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "小鸭子观察日落时影子变长，老树用温暖的比喻回答了成长的问题。",
+      "wordCount": 103,
+      "paragraphs": [
+        {
+          "en": "Spring is coming! The sky is clearer and the sun is brighter. Wu Binbin and his family are going on a trip to the countryside. Wu Binbin has a story to tell Robin.",
+          "zh": "春天来了！天空更晴朗，太阳更明亮。吴彬彬和家人要去乡下旅行，他有一个故事要讲给罗宾听。"
+        },
+        {
+          "en": "Little Duck is watching the sun go down. It is getting lower and lower, but his shadow is getting longer and longer.",
+          "zh": "小鸭子正在看着太阳落山。太阳变得越来越低，但它的影子却变得越来越长。"
+        },
+        {
+          "en": "\"Why is that?\" Little Duck asks his friend Old Tree. \"You are older and smarter than me. Tell me — why is my shadow longer when the sun gets lower?\"",
+          "zh": "“为什么会那样呢？”小鸭子问它的朋友老树。“你比我更年长、更聪明。告诉我——为什么太阳越低，我的影子就越长？”"
+        },
+        {
+          "en": "Old Tree says, \"That's easy, Little Duck. The sun goes down every day, and we grow older every day. Your shadow grows longer because you are growing taller. You are becoming a big beautiful bird!\"",
+          "zh": "老树说：“这很简单，小鸭子。太阳每天都会落山，我们也每天都在长大。你的影子变长，是因为你在长高。你正在变成一只又大又漂亮的鸟！”"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "lower and lower / longer and longer",
+          "meaning": "越来越低 / 越来越长",
+          "note": "“比较级 + and + 比较级”表示事物程度随时间不断加深。"
+        },
+        {
+          "phrase": "older and smarter than me",
+          "meaning": "比我更年长、更聪明",
+          "note": "形容词比较级常加 -er，配合 than 引出比较对象。"
+        },
+        {
+          "phrase": "watch ... go down",
+          "meaning": "看着……落下",
+          "note": "watch sb./sth. do sth. 表示观看某人/某物做某事的全过程。"
+        }
+      ]
+    },
+    {
+      "id": "pep-g8-yugong",
+      "order": 2,
+      "level": "A2",
+      "difficultyLabel": "基础 · 初中八下",
+      "grade": "人教版初中英语八年级下册 Unit 6",
+      "title": "An Old Man Tried to Move the Mountains",
+      "titleZh": "愚公移山",
+      "source": "ChinaTextbook (GitHub) · 人教版初中英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "经典中国寓言《愚公移山》英文版，练习过去时叙事与结果状语从句。",
+      "wordCount": 149,
+      "paragraphs": [
+        {
+          "en": "Once upon a time, there was an old man named Yu Gong. There were two mountains near his house. They were so big and high that it took a long time to walk to the other side.",
+          "zh": "从前，有一位名叫愚公的老人。他家附近有两座山。它们又大又高，以至于走到山的那一边要花很长时间。"
+        },
+        {
+          "en": "Yu Gong told his family that they should all work together to move the mountains. \"We can put the earth and stone into the sea,\" he said. So the next day, Yu Gong and his family began to move the mountains.",
+          "zh": "愚公告诉家人，他们应该齐心协力把山移走。“我们可以把土和石头运到海里去，”他说。于是第二天，愚公和他的家人开始移山。"
+        },
+        {
+          "en": "Another old man, Zhi Sou, saw them working and said, \"You are so silly! You are old and weak. You can't even move a small tree, so how can you move these two big mountains?\"",
+          "zh": "另一位老人智叟看见他们在干活，说道：“你太愚蠢了！你又老又弱。你连一棵小树都搬不动，怎么能移走这两座大山呢？”"
+        },
+        {
+          "en": "Yu Gong replied, \"My family will continue to move the mountains after I die. But the mountains will not grow larger. So little by little, they will become smaller.\"",
+          "zh": "愚公回答说：“我死后，我的家人还会继续移山。可是山却不会再长高。所以一点一点地，它们终会变小。”"
+        },
+        {
+          "en": "A god was so moved by Yu Gong's story that he sent two gods down to take the mountains away. This story reminds us that you can never give up, and that anything is possible if you work hard.",
+          "zh": "一位神仙被愚公的故事深深打动，派了两名神将把山搬走了。这个故事提醒我们永远不要放弃，只要努力，一切皆有可能。"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "so ... that ...",
+          "meaning": "如此……以至于……",
+          "note": "so 后接形容词或副词，that 引导结果状语从句。"
+        },
+        {
+          "phrase": "little by little",
+          "meaning": "一点一点地，逐渐地",
+          "note": "类似表达还有 step by step（一步一步地）、day by day（日复一日）。"
+        },
+        {
+          "phrase": "remind sb. that ...",
+          "meaning": "提醒某人……",
+          "note": "后接宾语从句，常见结构还有 remind sb. of sth.（使某人想起某事）。"
+        }
+      ]
+    },
+    {
+      "id": "pep-g9-liwen",
+      "order": 3,
+      "level": "B1",
+      "difficultyLabel": "巩固 · 初中九年级",
+      "grade": "人教版初中英语九年级 Unit 4",
+      "title": "He Studies Harder Than He Used To",
+      "titleZh": "他比过去更努力学习了",
+      "source": "ChinaTextbook (GitHub) · 人教版初中英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "少年李文在父母陪伴与沟通后走出孤独与迷茫，学会理解与坚持。",
+      "wordCount": 244,
+      "paragraphs": [
+        {
+          "en": "Li Wen is a normal 15-year-old boy from the countryside. He works very hard and does well in school. It is hard to believe that he used to have difficulties in school.",
+          "zh": "李文是一个来自农村的普通15岁男孩。他学习非常努力，在学校表现很好。很难相信他过去在学校曾遇到过不少困难。"
+        },
+        {
+          "en": "When he was a little boy, he seldom caused any problems, and his family spent a lot of time together. Things began to change when his parents moved to the city to look for jobs, and his grandparents came to take care of him. But he missed his parents so much and he often felt lonely and unhappy.",
+          "zh": "小时候，他很少惹麻烦，一家人常常在一起。但父母去城里找工作后情况开始变化，爷爷奶奶来照顾他。他非常想念父母，经常感到孤独和不开心。"
+        },
+        {
+          "en": "Li Wen's unhappiness began to influence his schoolwork. He became less interested in studying. Sometimes he was absent from classes and failed his examinations. Finally, his parents made the decision to send him to a boarding school. However, Li Wen was shy and was not able to make friends quickly in school. He found life there difficult.",
+          "zh": "李文的不开心开始影响学业。他对学习越来越没兴趣，有时甚至逃课、考试不及格。最后父母决定送他去寄宿学校，但他性格内向，很难很快交到朋友，觉得那里的生活十分艰难。"
+        },
+        {
+          "en": "One day he told his teacher that he wanted to leave the school. His teacher was worried about him and she called his parents. She advised them to talk with their son in person. So his parents took a 24-hour train and a 5-hour bus ride to get to Li Wen's school, and they had a long talk.",
+          "zh": "有一天他告诉老师自己想退学。老师很担心他，便给他的父母打了电话，建议他们亲自和儿子谈谈。于是父母坐了24小时火车又换乘5小时汽车来到学校，和他进行了一次长谈。"
+        },
+        {
+          "en": "\"It was exactly what I needed,\" he said. \"Now I understand that even though they are busy, they are always thinking of me. They take pride in everything good that I do.\"",
+          "zh": "“这正是我所需要的，”他说，“现在我明白了，尽管他们很忙，但心里一直挂念着我。我做的每一件好事，他们都为我感到骄傲。”"
+        },
+        {
+          "en": "After that, Li Wen's parents had much more communication with their son than they used to. He became more outgoing and made some good friends in school. He even joined the school basketball team and became active in many other activities. \"I'm much happier now, and I work even harder than I used to,\" says Li Wen. \"It's very important for parents to be there for their children.\"",
+          "zh": "从那以后，李文的父母和他有了比过去多得多的交流。他变得更外向，交到了好朋友，还加入了校篮球队并积极参加各种活动。“我现在快乐多了，学习也比以前更努力，”李文说，“父母陪在孩子身边非常重要。”"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "used to do sth.",
+          "meaning": "过去常常做某事（现在不了）",
+          "note": "注意区分 be used to doing sth.（习惯于做某事）。"
+        },
+        {
+          "phrase": "be absent from",
+          "meaning": "缺席……",
+          "note": "常用搭配：be absent from class / school（旷课/缺勤）。"
+        },
+        {
+          "phrase": "take pride in",
+          "meaning": "为……感到自豪",
+          "note": "同义短语为 be proud of。"
+        }
+      ]
+    },
+    {
+      "id": "pep-h1-freshman",
+      "order": 4,
+      "level": "B1",
+      "difficultyLabel": "进阶 · 高中必修一",
+      "grade": "人教版 (2019) 高中英语必修一 Unit 1",
+      "title": "The Freshman Challenge",
+      "titleZh": "高中新生的挑战",
+      "source": "ChinaTextbook (GitHub) · 人教版高中英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "高一新生 Adam 面对选课、社团落选与学业压力的心路历程与成长。",
+      "wordCount": 227,
+      "paragraphs": [
+        {
+          "en": "Hi! My name is Adam and I'm a freshman at senior high school. Going from junior high school to senior high school is a really big challenge. The first week was a little confusing.",
+          "zh": "嗨！我叫亚当，是一名高一新生。从初中升入高中真的是一项很大的挑战。开学第一周有点令人困惑。"
+        },
+        {
+          "en": "First, I had to think very carefully about which courses I wanted to take. The school adviser helped me choose the suitable ones: maths, English, chemistry, world history, and Chinese. I know that Chinese is a very difficult language, but I hope to be fluent when I graduate. My adviser recommended that I should sign up for advanced literature because I like English and I'm good at it.",
+          "zh": "首先，我必须非常仔细地考虑要选哪些课程。学校指导老师帮我挑选了合适的科目：数学、英语、化学、世界史和中文。我知道中文很难，但我希望毕业时能说一口流利的中文。指导老师建议我报名高级文学，因为我喜欢英语并且擅长它。"
+        },
+        {
+          "en": "I had to choose extra-curricular activities, too. I tried to join the school football team, but the coach told me that I didn't play well enough. Obviously, I was unhappy, but I won't quit. I'll find a way to improve on my own so that I can make the team next year. I joined a volunteer club instead. Every Wednesday, we work at a soup kitchen and hand out food to homeless people in the community.",
+          "zh": "我还得选择课外活动。我试着加入校足球队，但教练说我踢得还不够好。显然我很不开心，但我不会放弃。我会想办法靠自己提高，争取明年入队。作为替代，我加入了志愿者俱乐部。每周三我们在施粥处帮忙，向社区里无家可归的人分发食物。"
+        },
+        {
+          "en": "I know I'll have to study harder as a senior high school student and get used to being responsible for a lot more. I'm a bit worried about keeping up with the other students in my advanced course, and it'll be quite difficult to get used to all the homework. Still, I'm happy to be here. Studying hard isn't always fun, but I'll be well prepared for university or whatever else comes in the future.",
+          "zh": "我知道作为高中生我必须更加努力，习惯承担更多责任。我有点担心在高级课程上能否跟上其他同学，而且适应这么多作业也很难。尽管如此，我依然很高兴能来到这里。刻苦学习并不总是有趣，但它会让我为大学或未来迎面而来的一切做好充分准备。"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "recommend that sb. (should) do",
+          "meaning": "建议某人做某事",
+          "note": "recommend 后的宾语从句常使用虚拟语气“(should) + 动词原形”。"
+        },
+        {
+          "phrase": "sign up for",
+          "meaning": "报名参加（课程/活动）",
+          "note": "高中高频短语动词，后接名词或动名词。"
+        },
+        {
+          "phrase": "get used to doing",
+          "meaning": "习惯于做某事",
+          "note": "此处 to 为介词，后面必须接名词或动名词（如 being responsible）。"
+        }
+      ]
+    },
+    {
+      "id": "pep-h2-heritage",
+      "order": 5,
+      "level": "B2",
+      "difficultyLabel": "提高 · 高中必修二",
+      "grade": "人教版 (2019) 高中英语必修二 Unit 1",
+      "title": "From Problems to Solutions",
+      "titleZh": "从问题到解决",
+      "source": "ChinaTextbook (GitHub) · 人教版高中英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "探讨埃及阿斯旺大坝建设与文化遗产保护如何通过国际协作实现双赢。",
+      "wordCount": 259,
+      "paragraphs": [
+        {
+          "en": "Economic development is necessary if we want to improve society. There comes a time when the old must give way to the new, and it is not possible to preserve everything from our past as we move towards the future. Finding and keeping the right balance between progress and the protection of cultural sites can be a big challenge. Big challenges, however, can sometimes lead to great solutions.",
+          "zh": "如果我们想要改善社会，经济发展是必不可少的。总有这样一个时刻，旧事物必须给新事物让路；在我们迈向未来的过程中，不可能把过去的一切都保存下来。在社会进步与文化遗址保护之间寻找并保持恰当的平衡是一项巨大挑战。然而，巨大挑战有时会催生伟大的解决方案。"
+        },
+        {
+          "en": "In the 1950s, the Egyptian government wanted to build a new dam across the Nile in order to control floods, produce electricity, and supply water to more farmers in the area. But the proposal led to protests. Water from the dam would likely damage a number of temples and destroy cultural relics that were an important part of Egypt's cultural heritage. After listening to the scientists who had studied the problem, and citizens who lived near the dam, the government turned to the United Nations for help in 1959.",
+          "zh": "20世纪50年代，埃及政府打算在尼罗河上修建一座新大坝，以控制洪水、发电并为当地更多农民供水。但这项提议引发了抗议，因为大坝蓄水可能会损毁许多神庙并破坏埃及宝贵的文化遗产。在听取了研究人员与附近居民的意见后，政府于1959年向联合国寻求帮助。"
+        },
+        {
+          "en": "A committee was established to limit damage to the Egyptian buildings and prevent the loss of cultural relics. The group asked for contributions from different departments and raised funds within the international community. Experts investigated the issue, conducted several tests, and then made a proposal for how the buildings could be saved. Finally, a document was signed, and the work began in 1960.",
+          "zh": "一个委员会宣告成立，旨在限制对埃及建筑的破坏并防止文物流失。该小组向各部门寻求资助，并在国际社会筹集资金。专家们调查了问题、进行了多次试验，随后提出了拯救这些建筑的方案。最终，协议签署并于1960年正式动工。"
+        },
+        {
+          "en": "Temples and other cultural sites were taken down piece by piece, and then moved and put back together again in a place where they were safe from the water.",
+          "zh": "神庙和其他文化遗址被一块一块地拆卸下来，搬迁到远离水患的安全地带，然后再重新组装复原。"
+        },
+        {
+          "en": "The project was a huge success. Not only did it save the temples and cultural relics, but it also proved that international cooperation can solve seemingly difficult problems. The spirit of the Aswan Dam project is still alive today. Perhaps the best example is shown by UNESCO, which runs a programme that prevents world cultural heritage sites around the world from disappearing. If a problem seems too difficult for a single nation, the global community can sometimes provide a solution.",
+          "zh": "该项目取得了巨大成功。它不仅拯救了神庙和文物，也证明了国际合作能够解决看似棘手的难题。阿斯旺大坝项目的精神至今依然熠熠生辉。最好的例证便是联合国教科文组织推行的世界遗产保护计划。当一个问题对单一国家而言过于艰难时，国际社会往往能共同给出答案。"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "give way to",
+          "meaning": "给……让路；屈服于",
+          "note": "高频学术表达：the old must give way to the new（旧事物必将让位于新事物）。"
+        },
+        {
+          "phrase": "Not only did it save ...",
+          "meaning": "它不仅拯救了……",
+          "note": "not only 位于句首连接分句时，前一句须用部分倒装（助动词提到主语前）。"
+        },
+        {
+          "phrase": "turn to ... for help",
+          "meaning": "向……求助",
+          "note": "文中指政府向联合国寻求援助。"
+        }
+      ]
+    },
+    {
+      "id": "pep-h3-space",
+      "order": 6,
+      "level": "B2",
+      "difficultyLabel": "冲刺 · 高中必修三",
+      "grade": "人教版 (2019) 高中英语必修三 Unit 4",
+      "title": "Space: The Final Frontier",
+      "titleZh": "太空：最后的边境",
+      "source": "ChinaTextbook (GitHub) · 人教版高中英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "梳理人类探索宇宙的里程碑、挑战与未来愿景，强化非谓语动词与定语从句阅读。",
+      "wordCount": 270,
+      "paragraphs": [
+        {
+          "en": "\"Are we alone? What's out there?\" Looking up at the stars, people have always wanted to learn more about space, and scientists work hard to find answers. They make vehicles to carry brave people into space to find out the secrets of the universe. They also really wish to discover other planets that are suitable enough to support life.",
+          "zh": "“我们是孤独的吗？宇宙之外有什么？”仰望星空，人类一直渴望更深入地了解太空，科学家们也在努力寻找答案。他们制造运载器把勇敢的人们送入太空去探寻宇宙的奥秘，同时也希望能发现其他适合生命存在的行星。"
+        },
+        {
+          "en": "Before the mid-20th century, most people felt travelling into space was an impossible dream. However, some scientists were determined to help humans realise their dream to explore space. After many experiments, they succeeded in making rockets that could escape Earth's gravity.",
+          "zh": "20世纪中叶以前，大多数人认为太空旅行是遥不可及的梦想。然而，一些科学家下定决心要帮人类实现探索太空的愿望。经过反复试验，他们成功制造出能够摆脱地球引力的火箭。"
+        },
+        {
+          "en": "On 4 October 1957, the Sputnik 1 satellite was launched by the USSR and successfully orbited around Earth. Afterwards, the USSR focused on sending people into space, and on 12 April 1961, Yuri Gagarin became the first person in the world to go into space. Over eight years later, on 20 July 1969, American astronaut Neil Armstrong stepped onto the moon, famously saying, \"That's one small step for a man, one giant leap for mankind.\" Following this, many more goals were achieved. For example, America's NASA space agency launched Voyager 1 on 5 September 1977 to study deep space, and it still transmits data today.",
+          "zh": "1957年10月4日，苏联成功发射“斯普特尼克1号”人造卫星并绕地运行。1961年4月12日，尤里·加加林成为世界上首位进入太空的人。1969年7月20日，美国宇航员阿姆斯特朗登上月球并留下名言：“这是个人的一小步，却是人类的一大步。”此后更多目标陆续实现，例如1977年发射的“旅行者1号”至今仍在传回深空数据。"
+        },
+        {
+          "en": "Although scientists try to make sure nothing goes wrong, accidents can still happen. All the astronauts on the USSR's Soyuz 11 and America's Challenger died on missions. These disasters made everyone feel sad and disappointed, but the desire to explore the universe never died. This is because people firmly believe in the importance of space exploration, despite the risks.",
+          "zh": "尽管科学家极力确保万无一失，事故仍有可能发生。苏联“联盟11号”和美国“挑战者号”上的宇航员都在任务中牺牲。这些灾难令人痛心失望，但探索宇宙的渴望从未熄灭，因为人们坚信太空探索意义重大，哪怕伴随风险。"
+        },
+        {
+          "en": "One example that is still working today is the International Space Station. It orbits Earth, and with astronauts from different countries living on the space station, it provides a continuous human presence in space. The future of space exploration remains bright.",
+          "zh": "至今仍在运转的一个例证便是国际空间站。它围绕地球轨道运行，来自不同国家的宇航员在其中工作生活，使人类得以在太空中持续驻留。太空探索的未来依然一片光明。"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "be determined to do",
+          "meaning": "下定决心做某事",
+          "note": "同义表达有 make up one's mind to do。"
+        },
+        {
+          "phrase": "the first person ... to go into space",
+          "meaning": "第一个进入太空的人",
+          "note": "序数词修饰名词时，常使用不定式作后置定语。"
+        },
+        {
+          "phrase": "with astronauts ... living on the space station",
+          "meaning": "随着宇航员在空间站生活",
+          "note": "with 复合结构（with + 宾语 + 现在分词）作伴随状语，表主动且正在进行。"
+        }
+      ]
+    },
+    {
+      "id": "pep-s2-bridging",
+      "order": 7,
+      "level": "C1",
+      "difficultyLabel": "高阶 · 高中选必二",
+      "grade": "人教版 (2019) 高中英语选择性必修二 Unit 2",
+      "title": "Business Student Building Bridges",
+      "titleZh": "架起文化桥梁",
+      "source": "ChinaTextbook (GitHub) · 人教版高中英语",
+      "sourceUrl": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary": "中国留学生谢蕾在英国克服文化休克与学术差异，逐步成为中外交流桥梁的故事。",
+      "wordCount": 318,
+      "paragraphs": [
+        {
+          "en": "Six months ago, Xie Lei boarded a plane for London. It was the first time that she had left her motherland. She went to a university to study for a business qualification and chose to join an exchange programme. She was halfway through the preparation year, which most foreign students complete before applying for a degree course.",
+          "zh": "六个月前，谢蕾登上了飞往伦敦的航班。这是她第一次离开祖国。她赴英攻读商科资格并参加了交换项目。目前她的预科学习已经过半，大多数外国学生在申请学位课程前都需要完成这一年的预科。"
+        },
+        {
+          "en": "Like many other international students, Xie Lei had to face the challenge of living in a different culture. There were moments when she felt lonely and confused. \"I had a few problems with the language at first,\" she says. \"And shopping was a real problem because the shops didn't sell the food I was used to.\"",
+          "zh": "和许多留学生一样，谢蕾必须面对异国文化生活的挑战，有时会感到孤独和迷茫。“起初语言上有些困难，”她说，“买东西也是个麻烦，因为当地商店里没有我习惯吃的食物。”"
+        },
+        {
+          "en": "Living with a host family helped, though. They helped her understand local customs and taught her how to use public transport. They also advised her to join in local activities and interact with people.",
+          "zh": "不过，住在寄宿家庭给了她很大帮助。他们帮她了解当地风俗、教她乘坐公共交通，还鼓励她参加本地活动、多与人交流。"
+        },
+        {
+          "en": "Another big challenge was the academic requirements at the university. In China, students usually listen to the teacher and take notes; they rarely interrupt the teacher. In the UK, however, students need to show that they can think for themselves. They are expected to participate in class discussions, ask questions, and defend their own opinions.",
+          "zh": "另一个重大挑战来自大学的学术要求。在中国，学生通常听老师讲课、记笔记，很少打断老师；而在英国，学生需要展示独立思考的能力，课堂上需要积极参与讨论、提出问题并捍卫自己的观点。"
+        },
+        {
+          "en": "At first, Xie Lei found it hard to speak out in class. Her tutor helped her a lot by telling her to acknowledge other people's opinions, but also to feel confident and express her own ideas. Gradually, Xie Lei's confidence grew. She learned how to use the library and do research. She even gave a presentation to her class about a global business issue, which she passed with a high grade.",
+          "zh": "起初谢蕾觉得在课堂上发言很难。导师给了她莫大帮助，告诉她既要学会认可他人观点，也要自信地表达自己的见解。渐渐地，她的自信心不断增强，学会了利用图书馆做调研，还在班上就一个全球商业议题做了展示并获得高分。"
+        },
+        {
+          "en": "Now, half a year later, Xie Lei is doing very well. She has adapted to the new culture and has made many friends. She is also acting as a cultural ambassador, helping to bridge the gap between China and the UK. \"Going abroad is not just about studying,\" Xie Lei says. \"It's about opening your mind and building bridges between different cultures.\"",
+          "zh": "半年后的今天，谢蕾表现非常出色。她已经适应了新文化，结交了许多朋友，并作为“文化使者”帮助拉近中英之间的距离。“出国不只是为了学习知识，”谢蕾说，“更是为了打开思维，在不同文化之间架起沟通的桥梁。”"
+        }
+      ],
+      "keyPoints": [
+        {
+          "phrase": "It was the first time that she had left ...",
+          "meaning": "这是她第一次离开……",
+          "note": "“It was the first time that + 主语 + had done”是固定句型，从句须用过去完成时。"
+        },
+        {
+          "phrase": "found it hard to speak out",
+          "meaning": "发现很难开口发言",
+          "note": "it 为形式宾语，真正宾语是后面的不定式短语 to speak out。"
+        },
+        {
+          "phrase": "bridge the gap between ... and ...",
+          "meaning": "弥合……与……之间的隔阂",
+          "note": "bridge 在此处作动词，意为“架桥连接、弥合分歧”。"
+        }
+      ]
+    }
+  ]
+}

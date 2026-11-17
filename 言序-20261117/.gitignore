@@ -1,0 +1,13 @@
+node_modules/
+frontend/node_modules/
+backend/.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.sqlite3
+*.sqlite3-*
+.env
+*.zip
+.env.*
+*.secret*
+.wrangler/
+.dev.vars
